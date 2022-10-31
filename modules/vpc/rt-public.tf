@@ -7,16 +7,6 @@ resource "aws_internet_gateway" "igw" {
     }
 }
 
-# resource "aws_internet_gateway_attachment" "att-igw" {
-
-#     depends_on = [
-#       aws_internet_gateway.igw
-#     ]
-
-#     vpc_id = aws_vpc.vpc-terraform.id
-#     internet_gateway_id = aws_internet_gateway.igw.id
-# }
-
 resource "aws_default_route_table" "public" {
 
     depends_on = [
