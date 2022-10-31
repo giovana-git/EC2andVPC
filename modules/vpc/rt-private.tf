@@ -1,4 +1,4 @@
-resource "aws_eip" "elastic-ip" {
+esource "aws_eip" "elastic-ip" {
     vpc = true
 }
 
@@ -15,23 +15,6 @@ resource "aws_nat_gateway" "nat-gw" {
       Name = "nat-tf"
     }
 }
-
-#resource "aws_default_route_table" "private-route" {
-#
- #   depends_on = [
-  #    aws_nat_gateway.nat-gw
-   # ]
-#
- #   default_route_table_id = aws_vpc.vpc-terraform.default_route_table_id
-  #  route {
-   #     cidr_block = var.default_route_tables[1]
-    #    nat_gateway_id = aws_nat_gateway.nat-gw.id
-    #}
-#
- #   tags = {
-  #    Name = "private-route-tf"
-   # }
-#}
 
 
 resource "aws_route_table" "private-rt-table" {

@@ -1,4 +1,4 @@
-#####   VPC     #######
+####   VPC     #######
 
 variable "name" {
     type = string
