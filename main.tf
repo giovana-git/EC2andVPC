@@ -3,7 +3,7 @@ module "vpc" {
 }
 
 module "ec2" {
-  source = "./ec2"
+  source = "./modules/ec2"
 
   vpc_id = module.vpc.vpc_id
   subnet_id = module.vpc.private_subnets
