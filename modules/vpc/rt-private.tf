@@ -1,4 +1,4 @@
-esource "aws_eip" "elastic-ip" {
+resource "aws_eip" "elastic-ip" {
     vpc = true
 }
 
